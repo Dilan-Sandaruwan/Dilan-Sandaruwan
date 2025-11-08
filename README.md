@@ -1,15 +1,4 @@
-## Hi there 👋
-
-<!--
-**Dilan-Sandaruwan/Dilan-Sandaruwan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...# 👋 Welcome, I'm Dilan Sandaruwan
+# 👋 Welcome, I'm Dilan Sandaruwan
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=4000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;UI%2FUX+Enthusiast;Database+Architect;Always+Learning+New+Things" alt="Typing SVG" />
@@ -183,7 +172,3 @@ If you like my work and want to support me, consider buying me a coffee! ☕
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
 </div>
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
