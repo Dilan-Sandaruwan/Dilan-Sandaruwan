@@ -158,7 +158,7 @@ const Dilan = {
 [![Gmail](https://img.shields.io/badge/GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dilansandaruwan0080@gmail.com)
 
 **📧 Email:** dilansandaruwan0080@gmail.com  
-**📱 Telegram:** +94 77 402 9980
+**📱 Whatsapp:** +94 77 402 9980
 
 </div>
 
