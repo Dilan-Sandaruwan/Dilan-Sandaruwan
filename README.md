@@ -1,376 +1,230 @@
-import React, { useState, useEffect } from 'react';
-import { Code, Database, Cloud, Palette, Mail, MessageSquare, Github, Linkedin, Twitter, Instagram, Award, Coffee, ChevronDown, Menu, X, ExternalLink } from 'lucide-react';
+# 👋 Welcome, I'm Dilan Sandaruwan
 
-export default function Portfolio() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-  const [isScrolled, setIsScrolled] = useState(false);
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=4000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;UI%2FUX+Enthusiast;Database+Architect;Always+Learning+New+Things" alt="Typing SVG" />
+</div>
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-      const current = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 150 && rect.bottom >= 150;
-        }
-        return false;
-      });
-      if (current) setActiveSection(current);
-    };
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Dilan-Sandaruwan&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile Views" />
+</div>
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+---
 
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
+## 🚀 About Me
 
-  const skills = {
-    languages: ['C', 'Java', 'JavaScript', 'TypeScript', 'Python', 'PHP', 'Kotlin', 'Dart', 'C++', 'C#'],
-    frontend: ['React', 'Next.js', 'Angular', 'TailwindCSS', 'Material UI', 'Bootstrap', 'Redux'],
-    backend: ['Node.js', 'Express', 'Spring Boot', 'Hibernate', '.NET', 'GraphQL', 'NGINX'],
-    database: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Firebase', 'SQLite'],
-    cloud: ['Azure', 'Google Cloud', 'Firebase', 'Netlify', 'Heroku', 'Oracle'],
-    tools: ['Docker', 'Kubernetes', 'Git', 'Jenkins', 'Postman', 'Selenium', 'Jest']
-  };
+```typescript
+const Dilan = {
+    location: "Kurunegala, Sri Lanka 🇱🇰",
+    role: "Full-Stack Developer",
+    education: "Computer Science Student",
+    currentFocus: [
+        "Building scalable web applications",
+        "Exploring modern UI/UX patterns",
+        "Database optimization",
+        "System architecture design"
+    ],
+    passions: ["Clean Code", "Problem Solving", "Learning", "Innovation"],
+    lifePhilosophy: "Code is poetry written in logic"
+};
+```
 
-  const projects = [
-    {
-      title: "Full-Stack Web Applications",
-      description: "Scalable enterprise-level applications with modern architecture",
-      tech: ["React", "Node.js", "PostgreSQL", "Docker"],
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "UI/UX Design Projects",
-      description: "Modern, responsive interfaces with cutting-edge design patterns",
-      tech: ["Figma", "TailwindCSS", "React", "TypeScript"],
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Database Architecture",
-      description: "Optimized database systems with advanced querying capabilities",
-      tech: ["PostgreSQL", "MongoDB", "Redis", "Spring Boot"],
-      gradient: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cloud Solutions",
-      description: "Scalable cloud-based applications with CI/CD pipelines",
-      tech: ["Azure", "Docker", "Kubernetes", "Jenkins"],
-      gradient: "from-orange-500 to-red-500"
-    }
-  ];
+### 🎯 Current Focus
+- 🔭 Working on: **Full-stack web development projects**
+- 🎨 Improving: **Portfolio and UI/UX design**
+- 📚 Learning: **Java OOP & Backend Architecture**
+- 🗄️ Mastering: **Database design & System optimization**
+- 💡 Exploring: **Cloud technologies & DevOps**
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Code className="text-cyan-400" size={28} />
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Dilan Sandaruwan
-              </span>
-            </div>
+---
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className={`capitalize transition-colors ${
-                    activeSection === item ? 'text-cyan-400' : 'text-gray-300 hover:text-cyan-400'
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
+## 🛠️ Tech Arsenal
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-white"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
+<div align="center">
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-lg">
-            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="block w-full text-left px-4 py-3 capitalize hover:bg-slate-800 transition-colors"
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-        )}
-      </nav>
+### Languages
+![C Programming](https://img.shields.io/badge/C%20PROGRAMMING-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Java](https://img.shields.io/badge/JAVA-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![Python](https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Kotlin](https://img.shields.io/badge/KOTLIN-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Dart](https://img.shields.io/badge/DART-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 animate-pulse"></div>
-        <div className="text-center z-10 px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Hi, I'm <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Dilan Sandaruwan
-            </span>
-          </h1>
-          <div className="text-2xl md:text-3xl text-gray-300 mb-8">
-            <span className="inline-block animate-typing">Full Stack Developer</span>
-            <span className="text-cyan-400 animate-pulse"> | </span>
-            <span className="inline-block animate-typing-delay">UI/UX Enthusiast</span>
-          </div>
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            Building scalable web applications with modern technologies from Kurunegala, Sri Lanka 🇱🇰
-          </p>
-          <div className="flex gap-4 justify-center mb-12">
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
-            >
-              View My Work
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="px-8 py-3 border-2 border-cyan-400 rounded-full font-semibold hover:bg-cyan-400/10 transition-all duration-300"
-            >
-              Get In Touch
-            </button>
-          </div>
-          <ChevronDown className="animate-bounce mx-auto text-cyan-400" size={32} />
-        </div>
-      </section>
+### Frontend
+![Bootstrap](https://img.shields.io/badge/BOOTSTRAP-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Babel](https://img.shields.io/badge/BABEL-F9DC3E?style=for-the-badge&logo=babel&logoColor=black)
+![Bulma](https://img.shields.io/badge/BULMA-00D1B2?style=for-the-badge&logo=bulma&logoColor=white)
+![Material UI](https://img.shields.io/badge/MATERIAL%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![React](https://img.shields.io/badge/REACTJS-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Redux](https://img.shields.io/badge/REDUX-764ABC?style=for-the-badge&logo=redux&logoColor=white)
+![jQuery](https://img.shields.io/badge/JQUERY-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+![Webpack](https://img.shields.io/badge/WEBPACK-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black)
+![Next.js](https://img.shields.io/badge/NEXT.JS-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Angular](https://img.shields.io/badge/ANGULAR-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TAILWIND-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-      {/* About Section */}
-      <section id="about" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-              <Code className="text-cyan-400 mb-4" size={40} />
-              <h3 className="text-2xl font-bold mb-4">Developer</h3>
-              <p className="text-gray-400">
-                Computer Science student with expertise in full-stack development. Passionate about creating elegant solutions to complex problems using modern technologies.
-              </p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105">
-              <Palette className="text-purple-400 mb-4" size={40} />
-              <h3 className="text-2xl font-bold mb-4">Designer</h3>
-              <p className="text-gray-400">
-                UI/UX enthusiast focused on creating beautiful, intuitive interfaces. Proficient in Figma, Photoshop, and modern design principles.
-              </p>
-            </div>
-          </div>
-          <div className="mt-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700">
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">Current Focus</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              {[
-                "Building scalable web applications",
-                "Exploring modern UI/UX patterns",
-                "Database optimization",
-                "System architecture design",
-                "Cloud technologies & DevOps",
-                "Java OOP & Backend Architecture"
-              ].map((focus, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <span className="text-cyan-400">▹</span>
-                  <span className="text-gray-300">{focus}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+### Backend
+![Node.js](https://img.shields.io/badge/NODE.JS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/EXPRESS-000000?style=for-the-badge&logo=express&logoColor=white)
+![Hibernate](https://img.shields.io/badge/HIBERNATE-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
+![Spring](https://img.shields.io/badge/SPRING%20IOC-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/SPRING%20BOOT-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GRAPHQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/KUBERNETES-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![NGINX](https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-slate-900/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Tech Arsenal
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(skills).map(([category, items]) => (
-              <div
-                key={category}
-                className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105"
-              >
-                <h3 className="text-xl font-bold mb-4 capitalize text-cyan-400 flex items-center">
-                  {category === 'languages' && <Code size={24} className="mr-2" />}
-                  {category === 'frontend' && <Palette size={24} className="mr-2" />}
-                  {category === 'backend' && <Database size={24} className="mr-2" />}
-                  {category === 'database' && <Database size={24} className="mr-2" />}
-                  {category === 'cloud' && <Cloud size={24} className="mr-2" />}
-                  {category === 'tools' && <Award size={24} className="mr-2" />}
-                  {category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full text-sm hover:scale-110 transition-transform duration-200"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+### Database
+![PostgreSQL](https://img.shields.io/badge/POSTGRESQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/REDIS-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLITE-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MONGODB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MYSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Microsoft SQL Server](https://img.shields.io/badge/MS%20SQL-CC2927?style=for-the-badge&logo=microsoftssqlserver&logoColor=white)
+![Firebase](https://img.shields.io/badge/FIREBASE-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Featured Projects
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group relative bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700 hover:border-transparent transition-all duration-300 overflow-hidden"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-gray-400 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-slate-700/50 rounded-full text-sm border border-slate-600"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-                    <span>View Project</span>
-                    <ExternalLink size={16} />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+### Cloud & Hosting
+![Azure](https://img.shields.io/badge/AZURE-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Firebase](https://img.shields.io/badge/FIREBASE-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Netlify](https://img.shields.io/badge/NETLIFY-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+![Heroku](https://img.shields.io/badge/HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![Oracle](https://img.shields.io/badge/ORACLE-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-slate-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Get In Touch
-          </h2>
-          <p className="text-xl text-gray-400 mb-12">
-            Have a project in mind or want to collaborate? Let's connect!
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <a
-              href="mailto:dilansandaruwan0080@gmail.com"
-              className="flex items-center justify-center space-x-3 bg-slate-800/50 backdrop-blur-lg rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105"
-            >
-              <Mail className="text-cyan-400" size={24} />
-              <div className="text-left">
-                <div className="text-sm text-gray-400">Email</div>
-                <div className="text-white">dilansandaruwan0080@gmail.com</div>
-              </div>
-            </a>
-            <a
-              href="https://t.me/+94774029980"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center space-x-3 bg-slate-800/50 backdrop-blur-lg rounded-2xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
-            >
-              <MessageSquare className="text-purple-400" size={24} />
-              <div className="text-left">
-                <div className="text-sm text-gray-400">Telegram</div>
-                <div className="text-white">+94 77 402 9980</div>
-              </div>
-            </a>
-          </div>
-          <div className="flex justify-center space-x-6 mb-12">
-            <a href="https://github.com/Dilan-Sandaruwan" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
-              <Github size={32} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
-              <Linkedin size={32} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
-              <Twitter size={32} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
-              <Instagram size={32} />
-            </a>
-          </div>
-          <a
-            href="https://buymeacoffee.com/Dilan_Sandaruwan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
-          >
-            <Coffee size={24} />
-            <span>Buy Me a Coffee</span>
-          </a>
-        </div>
-      </section>
+### Testing
+![Selenium](https://img.shields.io/badge/SELENIUM-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Jest](https://img.shields.io/badge/JEST-C21325?style=for-the-badge&logo=jest&logoColor=white)
+![Postman](https://img.shields.io/badge/POSTMAN-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
-      {/* Footer */}
-      <footer className="py-8 text-center border-t border-slate-800">
-        <p className="text-gray-400">
-          "Code is poetry written in logic" - Dilan Sandaruwan
-        </p>
-        <p className="text-gray-500 mt-2">
-          © 2025 Dilan Sandaruwan. Built with React & TailwindCSS
-        </p>
-      </footer>
+### Version Control & CI/CD
+![Git](https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)
+![GitLab](https://img.shields.io/badge/GITLAB-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
+![Docker](https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Jenkins](https://img.shields.io/badge/JENKINS-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes typing {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 1s ease-out;
-        }
-        .animate-typing {
-          animation: typing 2s ease-in-out;
-        }
-        .animate-typing-delay {
-          animation: typing 2s ease-in-out 0.5s both;
-        }
-      `}</style>
-    </div>
-  );
-}
+### Preferred IDEs & Tools
+![Eclipse](https://img.shields.io/badge/ECLIPSE-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white)
+![VS Code](https://img.shields.io/badge/VSCODE-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![JetBrains](https://img.shields.io/badge/JETBRAINS%20IDE-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
+![Postman](https://img.shields.io/badge/POSTMAN-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![VirtualBox](https://img.shields.io/badge/VIRTUALBOX-183A61?style=for-the-badge&logo=virtualbox&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/UBUNTU-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+
+### Design & Creative
+![Figma](https://img.shields.io/badge/FIGMA-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Adobe Photoshop](https://img.shields.io/badge/PHOTOSHOP-31A8FF?style=for-the-badge&logo=adobephotoshop&logoColor=white)
+![Adobe Premiere Pro](https://img.shields.io/badge/PREMIERE%20PRO-9999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)
+![Adobe After Effects](https://img.shields.io/badge/AFTER%20EFFECTS-9999FF?style=for-the-badge&logo=adobeaftereffects&logoColor=white)
+![Canva](https://img.shields.io/badge/CANVA-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
+
+### Other Technologies
+![Arduino](https://img.shields.io/badge/ARDUINO-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![Unity](https://img.shields.io/badge/UNITY-000000?style=for-the-badge&logo=unity&logoColor=white)
+
+</div>
+
+---
+
+## 🔗 Connect with me
+
+<div align="center">
+
+[![Dev.to](https://img.shields.io/badge/DEV.TO-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/dilan-sandaruwan)
+[![Medium](https://img.shields.io/badge/MEDIUM-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@dilan-sandaruwan)
+[![CodePen](https://img.shields.io/badge/CODEPEN-000000?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/dilan-sandaruwan)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/dilan-sandaruwan)
+[![Twitter](https://img.shields.io/badge/TWITTER-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/dilan-sandaruwan)
+[![Instagram](https://img.shields.io/badge/INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/dilan-sandaruwan)
+[![CodeChef](https://img.shields.io/badge/CODECHEF-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://codechef.com/users/dilan-sandaruwan)
+[![HackerRank](https://img.shields.io/badge/HACKERRANK-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black)](https://hackerrank.com/dilan-sandaruwan)
+[![LeetCode](https://img.shields.io/badge/LEETCODE-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/dilan-sandaruwan)
+
+</div>
+
+---
+
+## 📞 Reach me
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/TELEGRAM-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+94774029980)
+[![Outlook](https://img.shields.io/badge/OUTLOOK-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white)](mailto:dilansandaruwan0080@outlook.com)
+[![Gmail](https://img.shields.io/badge/GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dilansandaruwan0080@gmail.com)
+
+**📧 Email:** dilansandaruwan0080@gmail.com  
+**📱 Telegram:** +94 77 402 9980
+
+</div>
+
+---
+
+## 📊 GitHub Statistics
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Dilan-Sandaruwan&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="170"/>
+  <img src="https://nirzak-streak-stats.vercel.app/?user=Dilan-Sandaruwan&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="170"/>
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dilan-Sandaruwan&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" width="400"/>
+</div>
+
+---
+
+## 🏆 GitHub Achievements
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Dilan-Sandaruwan&theme=tokyonight&no-frame=true&no-bg=false&margin-w=4&row=1&column=7" alt="GitHub Trophies"/>
+</div>
+
+---
+
+## 📈 Contribution Graph
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dilan-Sandaruwan&theme=tokyo-night&hide_border=true" alt="Contribution Graph"/>
+</div>
+
+---
+
+## 🔝 Top Contributed Repositories
+
+<div align="center">
+  <img src="https://github-contributor-stats.vercel.app/api?username=Dilan-Sandaruwan&limit=5&theme=tokyonight&combine_all_yearly_contributions=true" alt="Top Contributed Repos"/>
+</div>
+
+---
+
+## ✍️ Random Dev Quote
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+</div>
+
+---
+
+## 💰 Support My Work
+
+<div align="center">
+
+If you like my work and want to support me, consider buying me a coffee! ☕
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/Dilan_Sandaruwan)
+
+</div>
+
+---
+
+<div align="center">
+  
+### 💭 "Code is like humor. When you have to explain it, it's bad." – Cory House
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+
+</div>
