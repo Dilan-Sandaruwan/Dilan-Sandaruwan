@@ -21,6 +21,11 @@
   </video>
 </p>
 
+<p align="center">
+  <video src="https://v1.pinimg.com/videos/mc/720p/10/a5/84/10a5840652615a9539f3792070f43881.mp4" width="100%" autoplay loop muted>
+  </video>
+</p>
+
 ## 🚀 About Me
 
 ```typescript
