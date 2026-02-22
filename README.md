@@ -29,17 +29,17 @@
 ## 🚀 About Me
 
 ```typescript
-const Dilan = {
+const Sandaruwan = {
     location: "Kurunegala, Sri Lanka 🇱🇰",
     role: "Full-Stack Developer",
-    education: "Computer Science Student",
+    education: "Second-Year Software Engineering Student", //
     currentFocus: [
-        "Building scalable web applications",
-        "Exploring modern UI/UX patterns",
-        "Database optimization",
-        "System architecture design"
+        "Spring Boot REST API Development", //
+        "Laravel & React Full-Stack Apps", //
+        "Robotics & Autonomous Systems", //
+        "MySQL Database Optimization" //
     ],
-    passions: ["Clean Code", "Problem Solving", "Learning", "Innovation"],
+    passions: ["Clean Code", "Robotics Innovation", "Problem Solving"], //
     lifePhilosophy: "Code is poetry written in logic"
 };
 ```
