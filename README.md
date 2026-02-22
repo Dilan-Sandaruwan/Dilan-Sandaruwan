@@ -30,27 +30,18 @@
 
 ```typescript
 const Dilan = {
-
     location: "Kurunegala, Sri Lanka 🇱🇰",
-
     role: "Full-Stack Developer",
-
     education: "Computer Science Student",
-
     currentFocus: [
 
         "Building scalable web applications",
-
         "Exploring modern UI/UX patterns",
-
         "Database optimization",
-
         "System architecture design"
 
     ],
-
     passions: ["Clean Code", "Problem Solving", "Learning", "Innovation"],
-
     lifePhilosophy: "Code is poetry written in logic"
 
 };
