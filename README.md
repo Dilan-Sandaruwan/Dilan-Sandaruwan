@@ -9,6 +9,11 @@
 </div>
 
 ---
+<p align="center">
+  <video src="https://v1.pinimg.com/videos/mc/720p/c2/3d/93/c23d93ca01d37c08186b3bb7f585f512.mp4" width="600" controls muted autoplay loop>
+    Your browser does not support the video tag.
+  </video>
+</p>
 
 ## 🚀 About Me
 
